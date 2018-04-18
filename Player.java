@@ -25,6 +25,7 @@ public class Player {
     public static boolean left;
     public static boolean right;
     public static boolean isFiring;
+    public static boolean isFiringMouse;
 
     //Constructor
     public Player() {
@@ -47,6 +48,7 @@ public class Player {
         right = false;
 
         isFiring = false;
+        isFiringMouse = false;
     }
 
     //Functions
@@ -95,7 +97,7 @@ public class Player {
         dy = 0;
         dx = 0;
 
-        if (isFiring) {
+        if (isFiring || isFiringMouse) {
             GamePanel.bullets.add(new Bullet());
         }
     }

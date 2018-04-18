@@ -47,14 +47,16 @@ public class Bullet {
     }
 
     public boolean remove() {
-         if (y < 0 && y > GamePanel.HEIGHT && x < 0 && x > GamePanel.WIDTH)
+         if (y < 0 || y > GamePanel.HEIGHT || x < 0 || x > GamePanel.WIDTH)
              return true;
         return false;
     }
     public void update() {
+        //space hit
+//        y -= speed;
+        //mouse hit
         x += dx;
         y += dy;
-        //y -= speed;
     }
 
     public void draw(Graphics2D g) {

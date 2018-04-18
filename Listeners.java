@@ -29,16 +29,16 @@ public class Listeners implements KeyListener, MouseListener, MouseMotionListene
     private void keyHelper(KeyEvent e, boolean b) {
         int key = e.getKeyCode();
 
-        if (key == KeyEvent.VK_UP) {
+        if (key == KeyEvent.VK_W) {
             Player.up = b;
         }
-        if (key == KeyEvent.VK_DOWN) {
+        if (key == KeyEvent.VK_S) {
             Player.down = b;
         }
-        if (key == KeyEvent.VK_LEFT) {
+        if (key == KeyEvent.VK_A) {
             Player.left = b;
         }
-        if (key == KeyEvent.VK_RIGHT) {
+        if (key == KeyEvent.VK_D) {
             Player.right = b;
         }
         if (key == KeyEvent.VK_SPACE) {
@@ -54,7 +54,7 @@ public class Listeners implements KeyListener, MouseListener, MouseMotionListene
     @Override
     public void mousePressed(MouseEvent e) {
         if (e.getButton() == MouseEvent.BUTTON1) {
-            GamePanel.player.isFiring = true;
+            GamePanel.player.isFiringMouse = true;
             GamePanel.leftMouse = true;
         }
     }
@@ -62,7 +62,7 @@ public class Listeners implements KeyListener, MouseListener, MouseMotionListene
     @Override
     public void mouseReleased(MouseEvent e) {
         if (e.getButton() == MouseEvent.BUTTON1) {
-            GamePanel.player.isFiring = false;
+            GamePanel.player.isFiringMouse = false;
             GamePanel.leftMouse = false;
         }
     }
