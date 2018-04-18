@@ -38,9 +38,58 @@ public class Enemy {
                         speed = 2;
                         health = 2;
 
-                        double angle = Math.toRadians(Math.random()*360);
-                        dx = sin(angle) * speed;
-                        dy = cos(angle) * speed;
+                        double angle1 = Math.toRadians(Math.random()*360);
+                        dx = sin(angle1) * speed;
+                        dy = cos(angle1) * speed;
+                        break;
+                    case (2):
+                        x = Math.random() * GamePanel.WIDTH;
+                        y = 0;
+                        r = 8;
+
+                        speed = 3;
+                        health = 3;
+
+                        double angle2 = Math.toRadians(Math.random()*360);
+                        dx = sin(angle2) * speed;
+                        dy = cos(angle2) * speed;
+                        break;
+                    case (3):
+                        x = Math.random() * GamePanel.WIDTH;
+                        y = 0;
+                        r = 9;
+
+                        speed = 4;
+                        health = 4;
+
+                        double angle3 = Math.toRadians(Math.random()*360);
+                        dx = sin(angle3) * speed;
+                        dy = cos(angle3) * speed;
+                        break;
+                    case (4):
+                        x = Math.random() * GamePanel.WIDTH;
+                        y = 0;
+                        r = 10;
+
+                        speed = 4;
+                        health = 5;
+
+                        double angle4 = Math.toRadians(Math.random()*360);
+                        dx = sin(angle4) * speed;
+                        dy = cos(angle4) * speed;
+                        break;
+                    case (5):
+                        x = Math.random() * GamePanel.WIDTH;
+                        y = 0;
+                        r = 20;
+
+                        speed = 8;
+                        health = 20;
+
+                        double angle5 = Math.toRadians(Math.random()*360);
+                        dx = sin(angle5) * speed;
+                        dy = cos(angle5) * speed;
+                        break;
                 }
         }
     }

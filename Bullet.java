@@ -7,6 +7,11 @@ public class Bullet {
 
     private double x;
     private double y;
+    private double dx;
+    private double dy;
+    private double distX;
+    private double distY;
+    private double dist;
     private int r;
     private int speed;
 
@@ -18,6 +23,14 @@ public class Bullet {
         y = GamePanel.player.getY();
         r = 2;
         speed = 10;
+
+        distX = GamePanel.mouseX - x;
+        distY = GamePanel.mouseY - y;
+        dist = Math.sqrt(distX * distX + distY * distY);
+
+        dx = distX / dist * speed;
+        dy = distY / dist * speed;
+
         color1 = Color.WHITE;
     }
 
@@ -34,12 +47,14 @@ public class Bullet {
     }
 
     public boolean remove() {
-         if (y < 0)
+         if (y < 0 && y > GamePanel.HEIGHT && x < 0 && x > GamePanel.WIDTH)
              return true;
         return false;
     }
     public void update() {
-        y -= speed;
+        x += dx;
+        y += dy;
+        //y -= speed;
     }
 
     public void draw(Graphics2D g) {

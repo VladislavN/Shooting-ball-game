@@ -17,7 +17,7 @@ public class Wave {
     //Constructor
     public Wave() {
         number = 1;
-        multiplier = 5;
+        multiplier = 10;
         timer = 0;
         delay = 5000;
         timerDiff = 0;
@@ -27,10 +27,42 @@ public class Wave {
     //Methods
     public void createEnemies() {
         int enemyCount = number * multiplier;
-        if (number < 10) {
+        if (number < 5) {
             while(enemyCount > 0) {
                 int type = 1;
                 int rank = 1;
+                GamePanel.enemies.add(new Enemy(type, rank));
+                enemyCount -= type * rank;
+            }
+        }
+        if (number < 10) {
+            while(enemyCount > 0) {
+                int type = 1;
+                int rank = 2;
+                GamePanel.enemies.add(new Enemy(type, rank));
+                enemyCount -= type * rank;
+            }
+        }
+        if (number < 15) {
+            while(enemyCount > 0) {
+                int type = 1;
+                int rank = 3;
+                GamePanel.enemies.add(new Enemy(type, rank));
+                enemyCount -= type * rank;
+            }
+        }
+        if (number < 20) {
+            while(enemyCount > 0) {
+                int type = 1;
+                int rank = 4;
+                GamePanel.enemies.add(new Enemy(type, rank));
+                enemyCount -= type * rank;
+            }
+        }
+        if (number < 25) {
+            while(enemyCount > 0) {
+                int type = 1;
+                int rank = 5;
                 GamePanel.enemies.add(new Enemy(type, rank));
                 enemyCount -= type * rank;
             }
